@@ -1,17 +1,22 @@
 import Foundation
 
 //bài 1
-func th(thang: Int) -> String {
+func th(nam: Int,thang: Int) -> String {
     if [1,3,5,7,8,10,12].contains(thang) {
         return "31 ngay"
     }
     else if thang == 2 {
-        return "28 ngay neu la nam khong nhuan \n29 ngay neu la nam nhuan"
+        if nam%4==0 && nam%100 != 0 || nam%400==0 {
+            return "29 ngay"
+        } else {
+            return "28 ngay"
+        }
     }
     else {
         return "30 ngay"
     }
 }
+
 
 //bài 2
 func tong(t: Int) -> Any {
@@ -72,13 +77,11 @@ func tim2(mang2: [Int]) -> Int {
 }
 
 //Bài 6
-func rever(y: String) -> String {
+func rever(y: String) {
     let y1 = Array(y)
-    var y2: [Character] = []
     for i in y1.reversed() {
-        y2.append(i)
+        print(i, terminator: "")
     }
-    return String(y2)
 }
 
 
@@ -92,5 +95,22 @@ func tria(h: Int) {
         print(x + y)
         h1 -= 1
         h2 += 2
+    }
+}
+
+
+
+func triba(h: Int) {
+    let day = 2*h-1
+    for i in 1...h {
+        for u in 1...day {
+            if u >= (h-1-i) && u <= (h-1+i) {
+                print("*", terminator: "")
+            }
+            else {
+                print(" ", terminator: "")
+            }
+            print()
+        }
     }
 }
