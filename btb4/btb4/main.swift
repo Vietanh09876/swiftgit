@@ -5,13 +5,14 @@ import Foundation
 //Bài 1
 func uoc(so: Int) -> [Int] {
     var uocs = [Int]()
-    for i in 1...so {
+    for i in 1...abs(so) {
         if so%i==0 {
             uocs.append(contentsOf: [i,-i])
         }
     }
     return uocs
 }
+
 
 //Bài 2
 func ten(te: String) {
