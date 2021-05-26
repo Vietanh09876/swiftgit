@@ -25,9 +25,9 @@ func ten(te: String) {
 func ques() {
     print("Đâu không phải là một ngôn ngữ lập trình?\na - Golang   b - Swift   c - Ruby   d - Daily\nĐáp án của bạn: ", terminator: "")
     let u = readLine()?.lowercased()
-    if u == "c" {
+    if u == "d" {
         print("Bạn đã trả lời đúng")
-    } else if ["a", "b", "d"].contains(u) {
+    } else if ["a", "b", "c"].contains(u) {
         print("Bạn đã trả lời sai")
     } else {
         print("Bạn chưa đưa ra câu trả lời")
@@ -57,4 +57,5 @@ func helo(so: Int) {
         print("Số không hợp lệ")
     }
 }
+
 
