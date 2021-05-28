@@ -31,13 +31,14 @@ func ques() {
         print("Bạn đã trả lời sai")
     } else {
         print("Bạn chưa đưa ra câu trả lời")
+        ques()
     }
 }
 
 //Bài 4
 func helo(so: Int) {
-    if so > 0 && so <= 32767 {
-        for i in 1..<so {
+    if so > 2 && so <= 32767 {
+        for i in 2..<so {
             var helos = [Int]()
             var re = 0
             for o in 1..<i{
@@ -58,4 +59,4 @@ func helo(so: Int) {
     }
 }
 
-
+helo(so: 32767)
