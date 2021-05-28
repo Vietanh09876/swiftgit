@@ -57,7 +57,7 @@ func lich() {
         print("Năm không hợp lệ")
         return
     }
-    if t2 > 12 {
+    if t2 > 12 || t2 < 1 {
         print("Tháng không hợp lệ")
         return
     }
@@ -232,7 +232,6 @@ func doan() {
     else {
         print("Hãy đoán 1 số bất kỳ từ 1-100: ", terminator: "")
         let y = readLine()
-        
         guard let y1 = y, let y2 = Int(y1) else {
             print("Không hợp lệ")
             o += 1
